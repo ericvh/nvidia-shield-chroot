@@ -1,0 +1,15 @@
+#!/bin/bash
+echo Secondary Init > /dev/console
+echo "Setting up networking..." > /dev/console
+export HOSTNAME=simmons
+hostname simmons
+echo simmons > /etc/hostname
+echo 127.0.0.1	localhost > /etc/hosts
+echo 127.0.1.1  simmons >> /etc/hosts
+/etc/init.d/networking start
+/etc/init.d/ssh start
+/bin/mknod /dev/fb0 c 29 0
+echo "Waiting for network config" > /dev/console
+sleep 5
+/sbin/dhclient eth0
+/sbin/sulogin /dev/tty1
