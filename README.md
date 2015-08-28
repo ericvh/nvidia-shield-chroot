@@ -3,7 +3,7 @@ Eric's NVIDIA Shield TV Chroot Hack
 This is a quick and dirty hack on top of the TWRP recovery stuff
 which chroots into ubuntu on an sdcard versus starting the recovery
 GUI.  There are essentially a few steps:
-
+* update your device to 1.3 or whatever the lastest firmware is.  Earlier firmware have some issues with booting without HDMI connected and may have other instabilities
 * enable debug mode on your device and oem unlock fastboot 
   http://forum.xda-developers.com/android-tv/nvidia-shield-android-tv/shield-android-tv-rooted-t3123197
 * grab bootimg_tools
