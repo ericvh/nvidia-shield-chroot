@@ -2,7 +2,7 @@
 
 echo Hello Squidboy > /dev/tty1
 /sbin/setconsole /dev/tty1
-echo atomic batteries to speed
+echo atomic batteries to speed > /dev/tty1
 mount /dev/block/mmcblk1p1 /boot
 mount -o bind /proc /boot/proc
 mount -o bind /sys /boot/sys
@@ -10,5 +10,5 @@ mount -o bind /dev /boot/dev
 mount -o bind /dev/pts /boot/dev/pts
 mount -o bind /tmp /boot/tmp
 mount -o bind /dev/tty1 /dev/console
-echo ======== Ubuntu Booted =========
+echo ======== Ubuntu Booted ========= > /dev/tty1
 chroot /boot /sbin/init2

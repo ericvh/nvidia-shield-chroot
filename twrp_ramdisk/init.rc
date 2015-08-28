@@ -124,7 +124,9 @@ service healthd /sbin/healthd -r
     critical
     seclabel u:r:healthd:s0
 
-service recovery /sbin/ubuntu
+service recovery /sbin/ubuntu setenforce 0
+    oneshot
+    seclabel u:r:recovery:s0
 
 service adbd /sbin/adbd --root_seclabel=u:r:su:s0 --device_banner=recovery
     disabled
