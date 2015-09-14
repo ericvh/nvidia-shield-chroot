@@ -23,3 +23,5 @@ NOTES:
 * probably should fix to use pivot_root or switch_root - haven't gotten this to work
 * there's probably a multirom path here as well, but I haven't really tried
 * happy to pull updates to any of this if folks have better methods...
+* kernel source here: http://nv-tegra.nvidia.com/gitweb/?p=linux-3.10.git;a=shortlog;h=refs/heads/rel-22r2-golden-fostermp
+
